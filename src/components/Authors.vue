@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="TheAuthors">
     <v-card>
       <v-list>
         <v-card-title class="headline">Yazarlar</v-card-title>
@@ -22,7 +22,7 @@
 <script>
 import axios from "../axios";
 export default {
-  name: "App",
+  name: "TheAuthors",
   data() {
     return {
       url2: "/users",

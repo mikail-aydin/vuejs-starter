@@ -39,6 +39,7 @@
 <script>
 import axios from "../axios";
 export default {
+  name: "TheBlogDetail",
   data() {
     const { postId } = this.$route.params;
     return {

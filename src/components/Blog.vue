@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="TheBlog">
     <v-card>
       <v-list>
         <v-card-title class="headline">İçerikler</v-card-title>
@@ -22,7 +22,7 @@
 <script>
 import axios from "../axios";
 export default {
-  name: "App",
+  name: "TheBlog",
   data() {
     return {
       url: "/posts",

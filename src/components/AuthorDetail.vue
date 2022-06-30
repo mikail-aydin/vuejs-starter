@@ -24,6 +24,7 @@
 <script>
 import axios from "../axios";
 export default {
+  name: "TheAuthorsDetail",
   data() {
     const { userId } = this.$route.params;
     return {
