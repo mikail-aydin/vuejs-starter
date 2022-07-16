@@ -42,6 +42,10 @@ export default {
           text: "Blog",
           to: "/blog",
         },
+        {
+          text: "Post",
+          to: "/posts",
+        },
       ],
     };
   },
