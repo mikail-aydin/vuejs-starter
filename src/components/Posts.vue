@@ -26,18 +26,18 @@
       </div>
       <br />
       <div id="ThePosts">
-        <v-btn type="submit" block color="primary" elevation="7" @click="msg"
+        <v-btn type="submit" block color="primary" elevation="7" @click="alert"
           >Gönder</v-btn
         >
       </div>
     </v-form>
     <br />
     <v-divider />
-    <v-card-title class="headline">Liste</v-card-title>
   </v-card>
 </template>
 <script>
 import axios from "../axios";
+import sweetAlert from "sweetalert";
 export default {
   name: "ThePosts",
   data() {
@@ -52,7 +52,6 @@ export default {
         (value) => (value || "").length <= 3 || "Maksimum 3 karakter!",
       ],
       rules2: [(value) => !!value || "Zorunlu!"],
-      message: "Kayıt başarılı!",
     };
   },
   methods: {
@@ -60,9 +59,10 @@ export default {
       axios
         .post("/posts", this.formData)
         .then((response) => (this.formData = response.data));
+      console.log(this.formData);
     },
-    msg() {
-      alert(this.message);
+    alert() {
+      sweetAlert("UYARI", "Kayıt Başarılı !");
     },
   },
 };
